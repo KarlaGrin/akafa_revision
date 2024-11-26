@@ -1,0 +1,722 @@
+* {
+    margin: 0px;
+    padding: 1px;
+    box-sizing: border-box;
+    /* sirve para el diseño de páginas web responsivas. facilita el diseño y la alineación de elementos en el diseño de la página.*/
+    font-family: "Montserrat", sans-serif;
+    color: #FAF3E0;
+}
+
+body {
+    background-color: #8B4513;
+}
+/* General Styles */
+
+
+
+header.navbar {
+    background-color: #F5DEB3 !important;
+    padding: 5px 5px;
+}
+
+
+
+
+
+.navbar {
+    background-color: #F5DEB3 !important;
+    /* Color de fondo */
+    color: #333;
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    background-color: #F5DEB3 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Logo */
+.logo-font {
+    
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1px;
+    /* Reduce el espacio debajo del título principal */
+    line-height: 1.2;
+    /* Reduce la altura de línea */
+}
+
+.sub-logo {
+    color: #714444;
+    font-size: medium;
+    font-weight: bold;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 0;
+    /* Elimina el espacio superior */
+    line-height: 1.2;
+    /* Ajusta la altura de línea */
+
+}
+
+
+
+/* Desktop Navigation */
+.nav-links ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li a {
+    color: #6B8E23;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #FFD700;
+    /* Amarillo dorado en hover */
+}
+
+/* Call to Action Button */
+.cta .btn-cta {
+    background-color: #FFD700;
+    /* Amarillo dorado */
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta .btn-cta:hover {
+    background-color: #E0B800;
+    /* Amarillo más oscuro */
+}
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu Toggle */
+#menu-toggle {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    padding: 20px;
+}
+
+/* Mobile Menu */
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    padding: 10px 20px;
+    /* Espaciado interno para los elementos */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Transición suave */
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block;
+    /* Hace clickeable todo el área del elemento */
+}
+
+.mobile-menu ul li:hover {
+
+    /* Fondo verde claro */
+    color: #333;
+    /* Texto oscuro */
+    box-shadow: 0 4px 8px rgba(0.5, 0.5, 0.5, 0.5);
+    /* Sombra ligera */
+}
+
+.mobile-menu ul li:hover a {
+    color: #FFC107;
+    /* Cambia también el color del enlace */
+}
+
+#menu-toggle:checked+.menu-icon+.mobile-menu {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* General Styles for Navbar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Permite que los elementos se muevan si no caben */
+    padding: 10px 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espacio entre el logo y el menú hamburguesa */
+}
+
+.logo img {
+    height: 50px;
+    /* Ajusta el tamaño del logo */
+}
+
+.hamburger {
+    display: none;
+    /* Oculta el menú hamburguesa en pantallas grandes */
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: #8B4513;
+    /* Cambia según el color del tema */
+}
+
+/* Call to Action Button */
+.cta .btn-cta {
+    padding: 10px 15px;
+    background-color: #6B8E23;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        /* Muestra el menú hamburguesa en pantallas pequeñas */
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+
+    }
+
+    #menu-toggle:checked~.mobile-menu {
+        display: block;
+    }
+}
+
+
+
+/*fin nvbar*/
+
+.kit-regulariza {
+    text-align: center;
+    /* Centra el texto dentro del div */
+    padding: 20px;
+    /* Espaciado interno */
+}
+
+.titulo {
+    font-size: 3rem;
+    /* Tamaño grande para el título */
+    margin-bottom: 10px;
+    /* Reduce el espacio con el subtítulo */
+    line-height: 1.2;
+    /* Mejora la separación entre líneas */
+    font-weight: bold;
+    /* Hace el título más destacado */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Sombra negra suave */
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    /* Tamaño menor para el subtítulo */
+    line-height: 1.3;
+    /* Asegura buena legibilidad */
+    margin: 0;
+    /* Elimina márgenes adicionales */
+    font-weight: 500;
+    /* Peso medio para diferenciar del título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    /* Sombra negra suave */
+    text-align: center;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2rem;
+        /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+        /* Reduce el tamaño del subtítulo en pantallas pequeñas */
+    }
+}
+
+
+/*banner inicial*/
+
+.feature-section {
+    display: flex;
+    /* Coloca los elementos en fila */
+    align-items: center;
+    /* Centra verticalmente la imagen y el texto */
+    gap: 5px;
+    /* Espacio entre la imagen y el listado */
+    padding-left: 50px;
+}
+
+.image-container img {
+    width: 4fr;
+    /* La imagen ocupa la mitad del ancho del contenedor */
+    height: auto;
+    /* Mantiene las proporciones de la imagen */
+}
+
+.features {
+    width: 50%;
+    /* El listado ocupa la otra mitad */
+}
+
+.features ul {
+    list-style: none;
+    /* Elimina los puntos predeterminados de la lista */
+    padding: 0;
+}
+
+.features li {
+    display: flex;
+    /* Alinea el icono y el texto en fila */
+    align-items: center;
+    /* Alinea verticalmente el icono y el texto */
+    margin-bottom: 15px;
+    /* Espacio entre los elementos de la lista */
+    font-size: 30px;
+    /* Tamaño del texto */
+    color: #FAF3E0;
+    /* Color del texto */
+}
+
+.features .icon {
+    margin-right: 10px;
+    /* Espacio entre el icono y el texto */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    /* Sombra negra suave */
+    ;
+    border-radius: 100%;
+
+}
+
+@media (max-width: 768px) {
+    .feature-section {
+        flex-direction: column;
+        /* Apila la imagen y el listado */
+    }
+
+    .image-container,
+    .features {
+        width: 100%;
+        /* Ocupan el 100% del ancho */
+    }
+
+    .image-container img {
+        width: 100%;
+        /* Imagen responsiva */
+    }
+}
+
+
+/* Que es el kit regulariza */
+
+
+.aviso-wrapper {
+    background-color: white;
+    /* Asegura que el fondo alrededor del div sea neutro */
+    padding: 20px;
+}
+
+.aviso {
+    background-color: #FFEB3B;
+    font-size: 1.3rem;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.descripcion {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #714444;
+    font-weight:500;
+}
+.content-container {
+    display: flex;
+    /* Pone los elementos uno al lado del otro */
+    align-items: center;
+    /* Alinea verticalmente el texto e imagen */
+    gap: 20px;
+    /* Espacio entre el texto y la imagen */
+    flex-wrap: wrap;
+    /* Permite que los elementos se apilen en pantallas pequeñas */
+    padding: 20px;
+}
+
+.text-container {
+    flex: 1;
+    /* Ocupa el espacio disponible */
+    font-size: 20px;
+
+}
+
+.image-container {
+    flex: 1;
+    /* La imagen ocupa el mismo espacio que el texto */
+    text-align: center;
+    /* Centra la imagen */
+
+}
+
+.image-container img {
+    max-width: 100%;
+    /* Asegura que la imagen no se salga del contenedor */
+    height: auto;
+    /* Mantiene las proporciones de la imagen */
+    border-radius: 5px;
+    /* Opcional: bordes redondeados */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        /* Apila el texto y la imagen en pantallas pequeñas */
+    }
+
+    .image-container {
+        margin-top: 20px;
+        /* Agrega espacio entre el texto y la imagen */
+    }
+}
+
+
+/*tabla Kit regulariza */
+
+.table-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas iguales */
+    gap: 100px;
+    /* Espacio entre columnas */
+    max-width: 800px;
+    margin: 0 auto;
+    /* Centra la tabla */
+}
+
+.table-column {
+    color: #FAF3E0 !important;
+    padding: 20px;
+    border: 2px solid #ddd;
+    /* Borde sutil */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.table-column h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6B8E23;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Sombra negra suave */
+
+}
+
+.table-column ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.table-column li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #FFC107;
+    /* Color del texto */
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        grid-template-columns: 1fr;
+        /* Una sola columna en pantallas pequeñas */
+    }
+}
+
+/* Formulario de Contacto */
+
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-container h2 {
+    font-size: 50px;
+    color: #FFEB3B;
+    margin-bottom: 10px;
+}
+
+.contact-form-container p {
+    font-size: 16px;
+    color: #FAF3E0;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #ffffff;
+    /* Fondo blanco */
+    color: #333;
+    /* Texto oscuro para buen contraste */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    /* Elimina el borde azul predeterminado */
+    transition: border 0.3s ease;
+    /* Transición suave para efectos */
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #FAF3E0;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #FFC107;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #6B8E23;
+    /* Verde oliva */
+}
+
+.btn-submit {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #6B8E23;
+    /* Botón verde oliva */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #557C17;
+    /* Más oscuro en hover */
+}
+
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+    }
+}
+
+body {
+
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+
+.strengths {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #8B4513;
+}
+
+.strength {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    /* Transiciones suaves */
+}
+
+.strength img {
+    width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+
+}
+
+.strength h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFC107;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Sombra negra suave */
+}
+
+.strength p {
+    font-size: 1rem;
+}
+
+/* Hover Effect */
+.strength:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* Sube y aumenta ligeramente de tamaño */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Agrega una sombra más pronunciada */
+}
+
+
+/*Footer*/
+.footer {
+    color: #f9f9f9;
+    /* Texto claro */
+    padding: 20px;
+    text-align: center;
+    /* Centra todo el texto */
+}
+
+.footer a {
+    font-size: medium;
+    color: #FFC107;
+    /* Verde oliva */
+    text-decoration: none;
+    /* Sin subrayado */
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #A5C663;
+    /* Verde más claro en hover */
+}
+
+.footer-content p {
+    margin: 5px 0;
+    /* Espaciado entre líneas */
+    font-size: 14px;
+}
